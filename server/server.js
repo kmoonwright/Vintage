@@ -18,9 +18,11 @@ if (!db) throw new Error("Provide a string to connect to MongoDB Atlas");
 
 
 app.use('/graphql', 
-  expressGraphQL({
-      schema,
-      graphiql: true
+  expressGraphQL(req => {
+      return {
+        schema,
+        graphiql: true
+      };
   })
 );
 

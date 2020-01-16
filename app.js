@@ -1,6 +1,5 @@
 const app = require('./server/server');
 const express = require('express');
-const expressGraphQL = require('express-graphql');
 
 const server = require('http').createServer(app)
 

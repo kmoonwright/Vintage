@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const expressGraphQL = require('express-graphql');
+const bodyParser = require('body-parser');
 const app = express();
 const db = require('../config/keys').mongoURI;
+const cors = require('cors');
 
 //GraphQL
 const models = require('./models/index');
@@ -16,6 +18,8 @@ mongoose
 
 if (!db) throw new Error("Provide a string to connect to MongoDB Atlas");
 
+app.use(bodyParser.json());
+app.use(cors());
 
 app.use('/graphql', 
   expressGraphQL(req => {

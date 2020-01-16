@@ -1,7 +1,7 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const expressGraphQL = require('express-graphql');
 const app = express();
-const mongoose = require('mongoose');
 const db = require('../config/keys').mongoURI;
 
 //GraphQL
@@ -24,8 +24,8 @@ app.use('/graphql',
   })
 );
 
-app.listen(5000, () => {
-  console.log("Running a GraphQL API server at localhost:5000/graphql");
-});
+// app.listen(5000, () => {
+//   console.log("Running a GraphQL API server at localhost:5000/graphql");
+// });
 
 module.exports = app;

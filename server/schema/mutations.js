@@ -2,10 +2,12 @@ const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString, GraphQLBoolean, GraphQLList, GraphWLID, GraphQLInt, GraphQLFloat } = graphql;
 const mongoose = require('mongoose');
 const AuthService = require('../services/auth');
+
 //Types
+const UserType = require('../types/user_type');
 
 //Models
-
+const User = mongoose.model('user');
 
 const mutations = new GraphQLObjectType({
   name: "Mutations",

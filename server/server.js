@@ -1,10 +1,14 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const expressGraphQL = require('express-graphql');
-const bodyParser = require('body-parser');
 const app = express();
+
+// Configure MongoDB, mongoose
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const db = require('../config/keys').mongoURI;
 const cors = require('cors');
+
+// Set up middleware
+const expressGraphQL = require('express-graphql');
 
 //GraphQL
 const models = require('./models/index');

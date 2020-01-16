@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString, GraphQLBoolean, GraphQLList, GraphWLID, GraphQLInt, GraphQLFloat } = graphql;
 const mongoose = require('mongoose');
-const AuthService = require('../services/auth')
+const AuthService = require('../services/auth');
 //Types
 
 //Models
